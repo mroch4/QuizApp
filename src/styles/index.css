@@ -1,0 +1,15 @@
+.question {
+  margin-bottom: 1.5rem;
+  padding: 0 0.5rem;
+}
+
+.answer {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.checked {
+  background-color: #86ce82;
+}
+/*# sourceMappingURL=index.css.map */
