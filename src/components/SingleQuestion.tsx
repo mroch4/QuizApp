@@ -13,16 +13,18 @@ interface QuestionProps {
 const SingleQuestion: FC<QuestionProps> = (props): JSX.Element => {
   const { question, count, total, reviewMode } = props;
 
+  const shuffleItems = !reviewMode && question.shuffleAnswers;
+
   return (
     <div className="question">
-      <header className="my-2">
+      <div className="header">
         ({count}/{total})&nbsp;
-        {question.content}
-      </header>
+        <span>{question.content}</span>
+      </div>
       <section>
         {question.answers
           .sort(() => {
-            if (question.shuffleAnswers) return Math.random() - 0.5;
+            if (shuffleItems) return Math.random() - 0.5;
             else return 0;
           })
           .map((answer) => (

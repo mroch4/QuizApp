@@ -14,23 +14,23 @@ const Layout = (): JSX.Element => {
     setCurrentQuiz(selectedQuiz);
   };
 
-  return (
+  return currentQuiz === undefined ? (
     <div className="container mt-3">
       <header>
         <h2>{LABELS.TITLE}</h2>
-        {currentQuiz !== undefined ? (
-          <button className="btn btn-primary" onClick={() => setCurrentQuiz(undefined)}>
-            {LABELS.BACK_TO}
-          </button>
-        ) : null}
       </header>
-      {currentQuiz === undefined ? (
-        <>
-          <span>{LABELS.MAIN}</span>
-          <Select onChangeEvent={(e: ChangeEvent<HTMLSelectElement>) => handleOnChange(e.currentTarget.value)} />
-        </>
-      ) : null}
-      {currentQuiz !== undefined ? <SingleQuiz quiz={currentQuiz} /> : null}
+      <span>{LABELS.MAIN}</span>
+      <Select onChangeEvent={(e: ChangeEvent<HTMLSelectElement>) => handleOnChange(e.currentTarget.value)} />
+    </div>
+  ) : (
+    <div className="container mt-3">
+      <header>
+        <h2>{LABELS.TITLE}</h2>
+        <button className="btn btn-primary" onClick={() => setCurrentQuiz(undefined)}>
+          {LABELS.BACK_TO}
+        </button>
+      </header>
+      <SingleQuiz quiz={currentQuiz} />
     </div>
   );
 };

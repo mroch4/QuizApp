@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 
 import SingleQuestion from "./SingleQuestion";
 import LABELS from "../common/labels";
@@ -12,7 +12,16 @@ interface QuizSection {
 const SingleQuiz: FC<QuizSection> = (props): JSX.Element => {
   const { quiz } = props;
 
-  const [reviewMode, setReviewMode] = useState(false);
+  const [reviewMode, setReviewMode] = useState<boolean>(false);
+  const shuffleItems = !reviewMode && quiz.shuffleQuestions;
+
+  const handleOnClick = () => {
+    setReviewMode(!reviewMode);
+  };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [reviewMode]);
 
   return (
     <div>
@@ -20,7 +29,7 @@ const SingleQuiz: FC<QuizSection> = (props): JSX.Element => {
       <section>
         {quiz.questions
           .sort(() => {
-            if (quiz.shuffleQuestions) return Math.random() - 0.5;
+            if (shuffleItems) return Math.random() - 0.5;
             else return 0;
           })
           .map((question: Question) => (
@@ -33,13 +42,11 @@ const SingleQuiz: FC<QuizSection> = (props): JSX.Element => {
             />
           ))}
       </section>
-      <button className="btn btn-primary">{LABELS.SUBMIT}</button>
-      <div className="form-check my-3">
-        <input className="form-check-input" type="checkbox" checked={reviewMode} onClick={() => setReviewMode(!reviewMode)} />
-        <label className="form-check-label" htmlFor="flexCheckDefault">
-          [Review Mode]
-        </label>
-      </div>
+      <footer>
+        <button className="btn btn-primary" onClick={handleOnClick}>
+          {reviewMode ? LABELS.ONCE_AGAIN : LABELS.SUBMIT}
+        </button>
+      </footer>
     </div>
   );
 };

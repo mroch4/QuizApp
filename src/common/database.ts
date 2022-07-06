@@ -76,24 +76,29 @@ export const quizzes: Quiz[] = [
     id: uuid(),
   },
   {
-    name: "Geografia Polski",
-    shuffleQuestions: false,
+    name: "Geografia",
+    shuffleQuestions: true,
     questions: [
       {
-        content: "Najwyższy polski szczyt to...",
+        content: "Drugim najwyższym szczytem Polski jest:",
         answers: [
           {
-            content: "Śniardwy",
+            content: "Hińczowa Turnia",
             isCorrect: false,
             id: uuid(),
           },
           {
-            content: "Turbacz",
+            content: "Niżnie Rysy",
             isCorrect: false,
             id: uuid(),
           },
           {
-            content: "Rysy",
+            content: "Świnica",
+            isCorrect: false,
+            id: uuid(),
+          },
+          {
+            content: "Mięguszowiecki Szczyt",
             isCorrect: true,
             id: uuid(),
           },
@@ -102,25 +107,52 @@ export const quizzes: Quiz[] = [
         id: uuid(),
       },
       {
-        content: "Które miasto jest stolicą województwa Lubuskiego?",
+        content: "Największą pustynią na świecie jest:",
         answers: [
           {
-            content: "Gorzów Wielkopolski",
+            content: "Sahara",
             isCorrect: false,
             id: uuid(),
           },
           {
-            content: "Zielona Góra",
+            content: "Gobi",
+            isCorrect: false,
+            id: uuid(),
+          },
+          {
+            content: "Atakama",
+            isCorrect: false,
+            id: uuid(),
+          },
+          {
+            content: "Antarktyda",
+            isCorrect: true,
+            id: uuid(),
+          },
+        ],
+        shuffleAnswers: true,
+        id: uuid(),
+      },
+      {
+        content: "Stolicą którego europejskiego kraju jest Kiszyniów?",
+        answers: [
+          {
+            content: "Rumunii",
+            isCorrect: false,
+            id: uuid(),
+          },
+          {
+            content: "Węgier",
+            isCorrect: false,
+            id: uuid(),
+          },
+          {
+            content: "Mołdawii",
             isCorrect: true,
             id: uuid(),
           },
           {
-            content: "Lublin",
-            isCorrect: false,
-            id: uuid(),
-          },
-          {
-            content: "Toruń",
+            content: "Gruzji",
             isCorrect: false,
             id: uuid(),
           },
@@ -129,25 +161,193 @@ export const quizzes: Quiz[] = [
         id: uuid(),
       },
       {
-        content: "Która rzeka jest najdłuższa w Polsce?",
+        content:
+          "Leży w południowo-zachodniej części obecnej Jordanii. Położona jest w skalnej dolinie, do której prowadzi jedna wąska droga wśród skał. Słynie z licznych budowli wykutych w skałach. Była miastem Nabatejczyków. Co to takiego?",
         answers: [
           {
-            content: "Wisła",
+            content: "Petra",
             isCorrect: true,
             id: uuid(),
           },
           {
-            content: "Warta",
+            content: "Dylomos",
             isCorrect: false,
             id: uuid(),
           },
           {
-            content: "San",
+            content: "Kordania",
+            isCorrect: false,
+            id: uuid(),
+          },
+          {
+            content: "Nabatejczen",
             isCorrect: false,
             id: uuid(),
           },
         ],
-        shuffleAnswers: false,
+        shuffleAnswers: true,
+        id: uuid(),
+      },
+      {
+        content: "Jakie miasto jest stolicą Meksyku?",
+        answers: [
+          {
+            content: "Tulum",
+            isCorrect: false,
+            id: uuid(),
+          },
+          {
+            content: "Mexico City",
+            isCorrect: true,
+            id: uuid(),
+          },
+          {
+            content: "Tex Mex",
+            isCorrect: false,
+            id: uuid(),
+          },
+          {
+            content: "Guadalajara",
+            isCorrect: false,
+            id: uuid(),
+          },
+        ],
+        shuffleAnswers: true,
+        id: uuid(),
+      },
+      {
+        content: "Jak nazywa się najdłuższy łańcuch górski na świecie, który rozciąga się na przestrzeni ponad 9000 km?",
+        answers: [
+          {
+            content: "Alpy",
+            isCorrect: false,
+            id: uuid(),
+          },
+          {
+            content: "Atlas",
+            isCorrect: false,
+            id: uuid(),
+          },
+          {
+            content: "Pireneje",
+            isCorrect: false,
+            id: uuid(),
+          },
+          {
+            content: "Andy",
+            isCorrect: true,
+            id: uuid(),
+          },
+        ],
+        shuffleAnswers: true,
+        id: uuid(),
+      },
+      {
+        content: "Enklawą jest:",
+        answers: [
+          {
+            content: "San Marino",
+            isCorrect: true,
+            id: uuid(),
+          },
+          {
+            content: "Alaska",
+            isCorrect: false,
+            id: uuid(),
+          },
+          {
+            content: "Australia",
+            isCorrect: false,
+            id: uuid(),
+          },
+          {
+            content: "RPA",
+            isCorrect: false,
+            id: uuid(),
+          },
+        ],
+        shuffleAnswers: true,
+        id: uuid(),
+      },
+      {
+        content: "Z ilu stanów składają się Stany Zjednoczone?",
+        answers: [
+          {
+            content: "40",
+            isCorrect: false,
+            id: uuid(),
+          },
+          {
+            content: "50",
+            isCorrect: true,
+            id: uuid(),
+          },
+          {
+            content: "55",
+            isCorrect: false,
+            id: uuid(),
+          },
+          {
+            content: "60",
+            isCorrect: false,
+            id: uuid(),
+          },
+        ],
+        shuffleAnswers: true,
+        id: uuid(),
+      },
+      {
+        content: "Konstantynopol i Bizancjum to wcześniejsze nazwy jakiego miasta?",
+        answers: [
+          {
+            content: "Stambuł",
+            isCorrect: true,
+            id: uuid(),
+          },
+          {
+            content: "Kapadocja",
+            isCorrect: false,
+            id: uuid(),
+          },
+          {
+            content: "Bursa",
+            isCorrect: false,
+            id: uuid(),
+          },
+          {
+            content: "Szanghaj",
+            isCorrect: false,
+            id: uuid(),
+          },
+        ],
+        shuffleAnswers: true,
+        id: uuid(),
+      },
+      {
+        content: "Polskim województwem o najmniejszej populacji jest:",
+        answers: [
+          {
+            content: "Podkarpackie",
+            isCorrect: false,
+            id: uuid(),
+          },
+          {
+            content: "Lubuskie",
+            isCorrect: false,
+            id: uuid(),
+          },
+          {
+            content: "Opolskie",
+            isCorrect: true,
+            id: uuid(),
+          },
+          {
+            content: "Podlaskie",
+            isCorrect: false,
+            id: uuid(),
+          },
+        ],
+        shuffleAnswers: true,
         id: uuid(),
       },
     ],

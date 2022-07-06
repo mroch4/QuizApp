@@ -15,6 +15,16 @@ header {
 
 .question {
   margin-bottom: 1.5rem;
+
+  div.header {
+    display: flex;
+    margin-bottom: 0.5rem;
+
+    span {
+      display: flex;
+      text-align: justify;
+    }
+  }
 }
 
 .answer {
@@ -43,5 +53,16 @@ header {
 
   &.shouldBe {
     border: 2px solid $correctGreen;
+  }
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+
+  .btn {
+    width: 120px;
   }
 }

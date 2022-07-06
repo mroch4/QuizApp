@@ -19,6 +19,20 @@ header {
   margin-bottom: 1.5rem;
 }
 
+.question div.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.question div.header span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: justify;
+}
+
 .answer {
   margin-bottom: 0.5rem;
   padding: 0.5rem;
@@ -46,5 +60,22 @@ header {
 
 .answer.shouldBe {
   border: 2px solid #91f086;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 2rem;
+}
+
+footer .btn {
+  width: 120px;
 }
 /*# sourceMappingURL=index.css.map */

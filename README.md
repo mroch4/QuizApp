@@ -4,7 +4,7 @@ Typescript based React Quiz App.
 
 ## TODOs:
 
-Use Firebase connection to store the quizzes
+Use Firebase connection to store the quizzes.
 
 ## Page URL:
 
