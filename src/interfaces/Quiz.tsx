@@ -4,4 +4,5 @@ export interface Quiz {
   name: string;
   shuffleQuestions: boolean;
   questions: Question[];
+  id: string;
 }

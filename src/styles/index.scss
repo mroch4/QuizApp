@@ -1,16 +1,47 @@
-$green: #86ce82;
+$checkedGreen: #48bf53;
+$correctGreen: #91f086;
+$incorrectRed: #dc3545;
+
+body {
+  background-color: #fafafa;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
 
 .question {
   margin-bottom: 1.5rem;
-  padding: 0 0.5rem;
 }
 
 .answer {
   margin-bottom: 0.5rem;
   padding: 0.5rem;
   cursor: pointer;
-}
 
-.checked {
-  background-color: $green;
+  &.checked {
+    color: white;
+    background-color: $checkedGreen;
+  }
+
+  &.disabled {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &.goodAns {
+    background-color: $correctGreen;
+  }
+
+  &.wrongAns {
+    color: white;
+    background-color: $incorrectRed;
+  }
+
+  &.shouldBe {
+    border: 2px solid $correctGreen;
+  }
 }

@@ -1,7 +1,7 @@
-import Quiz from "./components/SingleQuiz";
+import Layout from "./components/Layout";
 
 function App() {
-  return <Quiz />;
+  return <Layout />;
 }
 
 export default App;
