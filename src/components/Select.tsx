@@ -1,7 +1,7 @@
 import { ChangeEventHandler, FC } from "react";
 
-import { quizzes } from "../common/database";
-import { Quiz } from "../interfaces/Quiz";
+import { Quiz } from "../common/interfaces/Quiz";
+import { Quizzes } from "../common/Quizzes";
 
 interface SelectSection {
   onChangeEvent: ChangeEventHandler<HTMLSelectElement>;
@@ -13,7 +13,7 @@ const Select: FC<SelectSection> = (props): JSX.Element => {
   return (
     <select className="form-select my-2" onChange={onChangeEvent}>
       <option>...</option>
-      {quizzes.map((quiz: Quiz) => (
+      {Quizzes.map((quiz: Quiz) => (
         <option key={quiz.id} value={quiz.name}>
           {quiz.name}
         </option>

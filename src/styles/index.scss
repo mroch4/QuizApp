@@ -1,6 +1,6 @@
-$checkedGreen: #48bf53;
-$correctGreen: #91f086;
-$incorrectRed: #dc3545;
+$checkedBlue: #007bff;
+$correctGreen: #4fb008;
+$incorrectRed: #e8090e;
 
 body {
   background-color: #fafafa;
@@ -11,6 +11,8 @@ header {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #6c757d;
 }
 
 .question {
@@ -34,7 +36,7 @@ header {
 
   &.checked {
     color: white;
-    background-color: $checkedGreen;
+    background-color: $checkedBlue;
   }
 
   &.disabled {
@@ -43,6 +45,7 @@ header {
   }
 
   &.goodAns {
+    color: white;
     background-color: $correctGreen;
   }
 
@@ -52,6 +55,7 @@ header {
   }
 
   &.shouldBe {
+    font-weight: 600;
     border: 2px solid $correctGreen;
   }
 }
@@ -65,4 +69,8 @@ footer {
   .btn {
     width: 120px;
   }
+}
+
+.pointer {
+  cursor: pointer;
 }

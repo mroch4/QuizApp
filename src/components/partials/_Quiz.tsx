@@ -1,15 +1,11 @@
 import { FC, useEffect, useState } from "react";
 
-import SingleQuestion from "./SingleQuestion";
-import LABELS from "../common/labels";
-import { Quiz } from "../interfaces/Quiz";
-import { Question } from "../interfaces/Question";
+import { IQuiz } from "../interfaces/IQuiz";
+import { Question } from "../../common/interfaces/Question";
+import SingleQuestion from "./_Question";
+import labels from "../../labels/Labels";
 
-interface QuizSection {
-  quiz: Quiz;
-}
-
-const SingleQuiz: FC<QuizSection> = (props): JSX.Element => {
+const Quiz: FC<IQuiz> = (props): JSX.Element => {
   const { quiz } = props;
 
   const [reviewMode, setReviewMode] = useState<boolean>(false);
@@ -43,12 +39,12 @@ const SingleQuiz: FC<QuizSection> = (props): JSX.Element => {
           ))}
       </section>
       <footer>
-        <button className="btn btn-primary" onClick={handleOnClick}>
-          {reviewMode ? LABELS.ONCE_AGAIN : LABELS.SUBMIT}
+        <button className="btn btn-outline-primary" onClick={handleOnClick}>
+          {reviewMode ? labels.ONCE_AGAIN : labels.SUBMIT}
         </button>
       </footer>
     </div>
   );
 };
 
-export default SingleQuiz;
+export default Quiz;

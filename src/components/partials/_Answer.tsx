@@ -1,13 +1,8 @@
 import { FC, useState } from "react";
 
-import { Answer } from "./../interfaces/Answer";
+import { IAnswer } from "../interfaces/IAnswer";
 
-interface AnswerProps {
-  answer: Answer;
-  reviewMode: boolean;
-}
-
-const SingleAnswer: FC<AnswerProps> = (props): JSX.Element => {
+const Answer: FC<IAnswer> = (props): JSX.Element => {
   const { answer, reviewMode } = props;
 
   const [checked, setChecked] = useState<boolean>(false);
@@ -39,4 +34,4 @@ const SingleAnswer: FC<AnswerProps> = (props): JSX.Element => {
   );
 };
 
-export default SingleAnswer;
+export default Answer;

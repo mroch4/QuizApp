@@ -13,6 +13,8 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #6c757d;
 }
 
 .question {
@@ -41,7 +43,7 @@ header {
 
 .answer.checked {
   color: white;
-  background-color: #48bf53;
+  background-color: #007bff;
 }
 
 .answer.disabled {
@@ -50,16 +52,18 @@ header {
 }
 
 .answer.goodAns {
-  background-color: #91f086;
+  color: white;
+  background-color: #4fb008;
 }
 
 .answer.wrongAns {
   color: white;
-  background-color: #dc3545;
+  background-color: #e8090e;
 }
 
 .answer.shouldBe {
-  border: 2px solid #91f086;
+  font-weight: 600;
+  border: 2px solid #4fb008;
 }
 
 footer {
@@ -77,5 +81,9 @@ footer {
 
 footer .btn {
   width: 120px;
+}
+
+.pointer {
+  cursor: pointer;
 }
 /*# sourceMappingURL=index.css.map */

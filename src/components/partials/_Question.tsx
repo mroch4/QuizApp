@@ -1,16 +1,8 @@
 import { FC } from "react";
+import { IQuestion } from "../interfaces/IQuestion";
+import SingleAnswer from "./_Answer";
 
-import SingleAnswer from "./SingleAnswer";
-import { Question } from "../interfaces/Question";
-
-interface QuestionProps {
-  question: Question;
-  count: number;
-  total: number;
-  reviewMode: boolean;
-}
-
-const SingleQuestion: FC<QuestionProps> = (props): JSX.Element => {
+const Question: FC<IQuestion> = (props): JSX.Element => {
   const { question, count, total, reviewMode } = props;
 
   const shuffleItems = !reviewMode && question.shuffleAnswers;
@@ -35,4 +27,4 @@ const SingleQuestion: FC<QuestionProps> = (props): JSX.Element => {
   );
 };
 
-export default SingleQuestion;
+export default Question;
